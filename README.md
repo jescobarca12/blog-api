@@ -4,9 +4,12 @@ API REST para un blog: gestiona usuarios, autores y posts, con autenticación
 basada en JWT. Es el backend que consume el cliente
 [blog-frontend](https://github.com/jescobarca12/blog-frontend).
 
-<!-- TODO (con tus palabras): añade 2-3 líneas sobre POR QUÉ hiciste este proyecto
-     y qué querías practicar. Eso es lo que diferencia un README de portafolio de
-     uno genérico. -->
+## Sobre el proyecto
+
+Este fue el primer proyecto que construí desde cero. Quería aprender a montar una
+aplicación completa y entender todo lo posible en el proceso, en vez de solo
+copiar un tutorial. Casi todo era nuevo para mí y me costó bastante al principio,
+pero terminé muy satisfecho por lo mucho que aprendí construyéndolo.
 
 ## Características
 
