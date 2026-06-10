@@ -4,8 +4,8 @@ import { RegisterSchema, LoginSchema } from './auth.schema';
 
 export async function register(req: Request, res: Response) {
   const data = RegisterSchema.parse(req.body);
-  const usuario = await authService.registrar(data);
-  res.status(201).json(usuario);
+  const result = await authService.registrar(data);
+  res.status(201).json(result);
 }
 
 export async function login(req: Request, res: Response) {

@@ -15,7 +15,19 @@ export async function registrar(data: RegisterInput) {
     [email, password_hash, nombre]
   );
 
-  return result.rows[0];
+  const usuario = result.rows[0];
+
+  // Generamos token para que el usuario quede logueado justo tras registrarse.
+  const token = jwt.sign(
+    { userId: usuario.id, email: usuario.email },
+    process.env.JWT_SECRET!,
+    { expiresIn: '7d' }
+  );
+
+  return {
+    token,
+    usuario: { id: usuario.id, email: usuario.email, nombre: usuario.nombre },
+  };
 }
 
 export async function login(data: LoginInput) {
